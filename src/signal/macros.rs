@@ -407,6 +407,11 @@ macro_rules! map_ref {
     ($($input:tt)*) => { $crate::__internal_map_split!(__internal_map_ref, (), $($input)*) };
 }
 
+#[macro_export]
+macro_rules! map_ref_move {
+    ($($input:tt)*) => { $crate::__internal_map_split!(__internal_map_ref, (move), $($input)*) };
+}
+
 
 #[doc(hidden)]
 #[macro_export]
